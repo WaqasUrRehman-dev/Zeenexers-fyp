@@ -47,7 +47,10 @@ const NavBar = () => {
         {/* Main Menu for Desktop */}
         <div className="hidden md:flex grow relative items-center">
           <Search />
-          <nav className="flex items-center justify-center space-x-6">
+          <nav className="flex items-center justify-center space-x-4">
+            <Link to="/shop" className="hover:text-orange-400">
+              Shop
+            </Link>
             <Link to="/about" className="hover:text-orange-400">
               About
             </Link>
@@ -120,8 +123,11 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="flex flex-col md:hidden bg-primeColor text-white p-4 space-y-4">
+        <div className="flex flex-col md:hidden bg-primeColor text-white p-4 mt-1 space-y-4">
           {/* <Search /> */}
+          <Link to="/shop" onClick={toggleMenu}>
+            Shop
+          </Link>
           <Link to="/about" onClick={toggleMenu}>
             About
           </Link>
